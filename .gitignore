@@ -1,0 +1,12 @@
+# output
+out/
+
+# certificates
+certs/
+
+# project files
+.vscode/
+
+# binaries
+*.class
+*.jar
