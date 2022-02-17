@@ -62,8 +62,8 @@ public class URLUtils {
         try {
             nintendoTrustStore = KeyStore.getInstance(KeyStore.getDefaultType());
             nintendoTrustStore.load(null, null);
-            X509Certificate result = (X509Certificate)CertificateFactory.getInstance("X509").generateCertificate(new FileInputStream("CACERT_NINTENDO_CA_G3.der"));
-            nintendoTrustStore.setCertificateEntry("certs/CACERT_NINTENDO_CA_G3", result);
+            X509Certificate result = (X509Certificate)CertificateFactory.getInstance("X509").generateCertificate(new FileInputStream("certs/CACERT_NINTENDO_CA_G3.der"));
+            nintendoTrustStore.setCertificateEntry("CACERT_NINTENDO_CA_G3", result);
         } catch (CertificateException | IOException e) {
             System.err.println("You need to have the Nintendo CA G3 cert, as \"CACERT_NINTENDO_CA_G3.der\" in a \"certs\" subdirectory");
             System.exit(1);
